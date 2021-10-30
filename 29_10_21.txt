@@ -1,0 +1,61 @@
+задание 1
+
+def nested_sum(t):
+    s=0
+    for i in t:
+        if isinstance(i,list):
+            sum+=nested_sum(i)
+        else:
+            s+=i
+    return s
+
+ Задание 2
+
+def cumsum(t):
+   array=[]
+   s=0
+   for i in t:
+       s+=int(i)
+       array.append(s)
+   return array
+x=input().split()
+print(cumsum(x))
+
+задание 3
+
+def middle(t):
+  return t[1:-1]
+x=input().split()
+print(middle(x))
+
+задание 4
+
+def chop(t):
+    t[1:-1]
+x=input().split()
+print(chop(x))
+ 
+задание 5
+
+def is_sorted(t):
+   return t == sorted(t)
+print(is_sorted([1, 4, 3]))
+
+задание 6
+
+def is_anagram(word1, word2):
+   return sorted(word1)==sorted(word2)
+print(is_anagram("пила", "липа"))
+
+задание 7
+
+def has_duplicates(s):
+    s=sorted(s)
+    t=False
+    for i in range(len(s)):
+        if s[i-1]!=s[i]:
+            t=True
+            
+    return t
+x=input().split()
+print(has_duplicates(x))
